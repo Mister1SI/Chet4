@@ -13,11 +13,11 @@ fn main() {
 			"-h" => help(),
 			"-c" => {
 				let data = get_data(false);
-				client::start(data[0], data[1]);
+				client::start(data[0].as_str(), data[1].as_str());
 			}
 			"-s" => {
 				let data = get_data(true);
-				server::start(data[0]);
+				server::start(data[0].as_str());
 			}
 			_ => {
 				println!("Unknown mode {}.", mode);
@@ -28,8 +28,8 @@ fn main() {
 }
 
 fn get_data(server_mode: bool) -> Vec<String> {
-	let mut addr;
-	let mut uname;
+	let mut addr = String::new();
+	let mut uname = String::new();
 	println!("Enter the address & port (address:port):");
 	io::stdin().read_line(&mut addr).unwrap();
 	if !server_mode {

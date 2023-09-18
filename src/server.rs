@@ -1,3 +1,3 @@
-pub fn start(addr: String) {
-    println!("Server!");
+pub fn start(addr: &str) {
+    println!("{addr}\nServer!");
 }
