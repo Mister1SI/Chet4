@@ -12,8 +12,10 @@ pub fn start(addr: &String, uname: &String) -> std::io::Result<()> {
 		if msg == "exit()" {
 			break;
 		}
-		stream.write_all(&msg.as_bytes());
-		
+		match stream.write_all(&msg.as_bytes()) {
+			Ok(a) => (),
+			Err(e) => println!("Error sending message: {}", e),
+		}
 	}
 	Ok(())
 }
