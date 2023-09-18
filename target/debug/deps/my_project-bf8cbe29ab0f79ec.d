@@ -1,5 +1,7 @@
-/home/runner/Rust/target/debug/deps/my_project-bf8cbe29ab0f79ec.rmeta: src/main.rs
+/home/runner/Chet4/target/debug/deps/my_project-bf8cbe29ab0f79ec.rmeta: src/main.rs src/client.rs src/server.rs
 
-/home/runner/Rust/target/debug/deps/my_project-bf8cbe29ab0f79ec.d: src/main.rs
+/home/runner/Chet4/target/debug/deps/my_project-bf8cbe29ab0f79ec.d: src/main.rs src/client.rs src/server.rs
 
 src/main.rs:
+src/client.rs:
+src/server.rs:
