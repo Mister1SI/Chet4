@@ -13,11 +13,11 @@ fn main() {
 			"-h" => help(),
 			"-c" => {
 				let data = get_data(false);
-				client::start(data[0].as_str(), data[1].as_str());
+				client::start(&data[0], &data[1]);
 			}
 			"-s" => {
 				let data = get_data(true);
-				server::start(data[0].as_str());
+				server::start(&data[0]);
 			}
 			_ => {
 				println!("Unknown mode {}.", mode);
